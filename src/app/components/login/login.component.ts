@@ -37,14 +37,14 @@ export class LoginComponent {
       response => {
         if(response.length > 0 && response[0].password === password){
           sessionStorage.setItem('email', email as string);
-          this.messageService.add({ severity: 'info', summary: '!WAO¡', detail: 'Ta Bien :D' });
+          this.messageService.add({ severity: 'info', summary: 'Correo y Contraseña', detail: 'Login Exitoso' });
           this.router.navigate(['home']);
         } else{
-          this.messageService.add({ severity: 'warn', summary: 'Correo o Contraseña', detail: 'Ta Mal D:' });
+          this.messageService.add({ severity: 'warn', summary: 'Correo o Contraseña', detail: 'Tienen un Error' });
         }
       },
       error => {
-        this.messageService.add({ severity: 'warn', summary: 'Correo o Contraseña', detail: 'Ta Mal D:' });
+        this.messageService.add({ severity: 'warn', summary: 'Correo o Contraseña', detail: 'Tienen un Error' });
       }
     )
   }

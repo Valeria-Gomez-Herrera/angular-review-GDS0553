@@ -48,11 +48,11 @@ export class RegisterComponent {
 
     this.authService.registerUser(datos as User).subscribe(
       response => {
-        this.messageService.add({ severity: 'info', summary: 'Registro Exitoso', detail: 'Ta bien :D' });
+        this.messageService.add({ severity: 'info', summary: 'Registro Exitoso', detail: 'Puedes continuar Exitosamente' });
         this.router.navigate(['login'])
       },
       error => {
-        this.messageService.add({ severity: 'warn', summary: 'No se Registro', detail: 'Ta Mal D:' });
+        this.messageService.add({ severity: 'warn', summary: 'No se Registro', detail: 'Registrate nuevamente' });
       }
     )
   }
