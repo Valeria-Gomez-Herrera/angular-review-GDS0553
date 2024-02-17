@@ -1,6 +1,8 @@
 # Instalación
 - Clonar el repositorio
-- git clone url
+```
+git clone 
+```
 ## Instalar los módulos
 - Cambiarse al directorio
 - cd [nombre-proyecto]
